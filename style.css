@@ -24,41 +24,71 @@ main{
 header img{
     position:absolute;
     bottom: 0;
-    right: 50%;
+    left: 50%;
     height: 50%;
-   
+    transform: translateX(-50%);
 }
 
 header nav{
     position: absolute;
     right: 7%;
     top: 4%;
-    font-size: 8rem;
+    font-size: 3rem;
 }
 
 header hgroup{
     position: absolute;
     top: 15%;
     left: 10%;
+    z-index: 1;
 }
 
 header h1{
-    font-size: 8rem;
+    font-size: 3.6rem;
 
 }
 
 header h3{
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 400;
 }
 
 #arrow{
-    width: 96px;
-    height: 96px;
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
     border: 5px solid black; 
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);   
     border-radius: 50%;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+
 }
+
+ @media(orientation: portrait){ */
+    h3 span{
+        display: inline;
+    }
+ }
+
+ @media(orientation: portrait){ 
+    h3 span::after{
+        content: "\a ";
+        white-space: pre;
+      }
+ }
+
+ @media(orientation: landscape){
+     header img{
+         height: 60%;
+         right: 0;
+     }
+ }
+
+    
+
 
